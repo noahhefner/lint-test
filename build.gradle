@@ -35,3 +35,14 @@ spotless {
 
   }
 }
+
+/*
+Copy the spotless script into .git
+*/
+task installLocalGitHook (type: Copy) {
+  from new File(rootProject.rootDir, 'scripts/spotless.sh')
+  into { new File(rootProject.rootDir, '.git/hooks')}
+  fileMode 0775
+}
+
+//jar.dependsOn installLocalGitHook

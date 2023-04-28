@@ -1,0 +1,11 @@
+#!/bin/sh
+
+echo "Running spotless code formatter ..."
+
+./gradlew spotlessJavaApply
+
+status=$?
+
+echo "Finished code formatting."
+
+exit status

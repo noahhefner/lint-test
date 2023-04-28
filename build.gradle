@@ -18,7 +18,8 @@ repositories {
 spotless {
   java {
 
-    target '*.java'
+    // lib/<any number of directories in between>/anyfle.java
+    target 'lib/**/*.java'
 
     importOrder()
     
@@ -32,6 +33,5 @@ spotless {
     
     formatAnnotations()  // fixes formatting of type annotations, see below
 
-    licenseHeader '/* (C) $YEAR */' // or licenseHeaderFile
   }
 }

@@ -37,7 +37,7 @@ spotless {
 }
 
 /*
-Copy the spotless script into .git
+Copy the spotless script into .git as .git is not published as part of the repo.
 */
 task installLocalGitHook (type: Copy) {
   from new File(rootProject.rootDir, 'scripts/spotless.sh')
